@@ -6,17 +6,15 @@ Most of the people like having plants in their home and office, because hey are 
 The model takes an input image and classify it into healthy or disease.
 ## Data
 I use datasets of plants healthy and disease found in PlantVillage and developed a machine learning model in Tensorflow using keras API, getting either healthy (1) or diseased (0).
-The data set consisted in a total of 3377 images in the data set in which 1943 images are of category diseased and 1434 images are of category healthy. The size of each image is different so the image dimension. Most of the images are in jpeg but also contains some images in .png and gif.
+The data set consisted in a total of 3376 images in the data set in which 1942 images are of category diseased and 1434 images are of category healthy. The size of each image is different so the image dimension. Most of the images are in jpeg but also contains some images in .png and gif.
 ## Preparation of the data
-To feed the maching learning model, it was needed to convert each pixel of the RGB color images to a pixel with value betwwen 0 and 1, and resize all the images to a dimension of 160 x 160.
+To feed the maching learning model, it was needed to convert each pixel of the RGB color images to a pixel with value betwwen 0 and 1, and resize all the images to a dimension of 170 x 170.
 
 I use Tensorflow to feed the data to neural network, and created 3 datasets with different distributions of data, Training: 75%, Valid: 15% and Testing: 10%.
 ## Model
-Testing a few differents models of convolution neural networks, ending with the model Vgg16, pre trained on imagenet.
+Testing a few differents models of convolution neural networks, ending with the model Vgg16, pre trained on imagenet. The Vgg 16 has two dense layers. Each dense layer has 'relu' activation. And it has two convolutional layers at the end.
 
-The Vgg 16 has two dense layers, each having 512 units. Each dense layer has 'relu' activation. And it has two convolutional layers at the end.
-
-The model was trained on training dataset and after each epoch the model is tested against validation set. Once the model is trained it can be tuned by retraining the model on the last two convolutional layers, using a lower value of learning rate.
+The model was trained with training set and after each epoch the model is tested against validation set. Once the model is trained it can be tuned by retraining the model on the last two convolutional layers, using a lower value of learning rate.
 ## Approach
 With the created model it is aime to develop an app that uses that model to identify if our plants are heathy or there are problems with them, in case there is the second option, the app will give some advises of how to treat it in real time.
 
