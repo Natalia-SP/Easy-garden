@@ -15,5 +15,5 @@ Testing a few differents models of convolution neural networks, ending with the 
 The Vgg 16 has two dense layers, each having 512 units. Each dense layer has 'relu' activation. And it has two convolutional layers at the end.
 The model was trained on trin dataset and after each epoch the model is tested against validation set. Once the model is trained it can be tuned by retraining the model on the last two convolutional layers, using a lower value of learning rate.
 ## Approach
-With the created model it is aime to develop an app that uses that model to identify if our plants are heathy or there are problems with them, in case there is the second option, the app will give some advises of how to treat it in real time.
+With the created model it is aime to develop an app that uses that model to identify if our plants are heathy or there are problems with them, in case there is the second option, the app will give some advises of how to treat it in real time.//
 Using Kivy SDK we could make the camara obtein some images per a certain time and analice it with the Tensorflow model and poping up little signboards announcing good or bad news. In case the plant has a disease, the sign will contain the option to expand into some instruction to follow and take care of the plant.
