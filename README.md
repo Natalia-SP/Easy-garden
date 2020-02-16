@@ -1,7 +1,7 @@
 # Easy-garden
-Machine Learning model to take care easily of your plants.
+Machine Learning model to take care of your plants easily.
 ## An easy way to take care of a garden
-Most of the people like having plants in their home and office, because hey are beautiful and can connect us with nature just a little bit. But most of the time we really take care of them, and they could get sick. Thinking of this, a system that can monitor the health of plants and tell you if one of them got a disease could be helpful. The system needs to be capturing images at real time and then classify it in diseased or healthy, in case of a disease it can notify you or even provide a treatment for the plant.
+Most of the people like having plants in their home and office, because hey are beautiful and can connect us with nature just a little bit. But most of the time we really don't take care of them, and they could get sick. Thinking of this, a system that can monitor the health of plants and tell you if one of them got a disease could be helpful. The system needs to be capturing images at real time and then classify it in diseased or healthy, in case of a disease it can notify you or even provide a treatment for the plant.
 ## What it does
 The model takes an input image and classify it into healthy or disease.
 ## Data
@@ -16,8 +16,11 @@ Testing a few differents models of convolution neural networks, ending with the 
 
 The Vgg 16 has two dense layers, each having 512 units. Each dense layer has 'relu' activation. And it has two convolutional layers at the end.
 
-The model was trained on trin dataset and after each epoch the model is tested against validation set. Once the model is trained it can be tuned by retraining the model on the last two convolutional layers, using a lower value of learning rate.
+The model was trained on training dataset and after each epoch the model is tested against validation set. Once the model is trained it can be tuned by retraining the model on the last two convolutional layers, using a lower value of learning rate.
 ## Approach
 With the created model it is aime to develop an app that uses that model to identify if our plants are heathy or there are problems with them, in case there is the second option, the app will give some advises of how to treat it in real time.
 
-Using Kivy SDK we could make the camara obtein some images per a certain time and analice it with the Tensorflow model and poping up little signboards announcing good or bad news. In case the plant has a disease, the sign will contain the option to expand into some instruction to follow and take care of the plant.
+Using Azure Machine Learning and Kinvy SDK we could make the camara obtein some images per a certain time and analice it with the Tensorflow model and poping up little signboards announcing good or bad news. In case the plant has a disease, the sign will contain the option to expand into some instruction to follow and take care of the plant.
+
+## Future Work
+The current idea whas just for a system to notify about a disease and provide information about it, but it can be extended to build a mechanism that automatically can take care of the plants, giving them water, nutrients, fertilizer or even light pesticides, whenever the algorithm considers it necessary.
